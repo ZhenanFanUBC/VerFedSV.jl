@@ -42,10 +42,4 @@ vertical_lr_train(server, clients, valuator=valuator)
 # evaluation
 shapley_values = evaluation(server, clients, valuator=valuator)
 
-savename = "./examples/syn_adult.txt"
-f = open(savename, "w")
-for i = 1:config["num_clients"]
-    @printf(f, "    Shapley value for client %d = %.4f\n", i, shapley_values[i])
-end
-close(f)
 
